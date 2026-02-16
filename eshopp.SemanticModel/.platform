@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "eshopp"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fd431a8c-f41d-412d-8e3c-c06c91611a73"
+  }
+}
