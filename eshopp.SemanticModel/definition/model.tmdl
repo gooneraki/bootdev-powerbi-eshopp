@@ -10,5 +10,11 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["customers"]
+
+ref table customers
+ref table DateTableTemplate_f9da81f7-8c7b-42aa-8820-0107edfe8fae
+ref table LocalDateTable_a778537a-c5a2-4305-bf04-2f1cb7246a21
+
 ref cultureInfo en-US
 
