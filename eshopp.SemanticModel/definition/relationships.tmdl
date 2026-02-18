@@ -1,5 +1,5 @@
-relationship 8304bf24-575f-4dc0-b5f3-1402e2c05c47
+relationship 2ac88379-40e9-4a36-92de-047e9f4e0310
 	joinOnDateBehavior: datePartOnly
 	fromColumn: customers.customer_signup_date
-	toColumn: LocalDateTable_a778537a-c5a2-4305-bf04-2f1cb7246a21.Date
+	toColumn: LocalDateTable_a3cf9bad-64c0-4f53-b152-a17a840276f1.Date
 

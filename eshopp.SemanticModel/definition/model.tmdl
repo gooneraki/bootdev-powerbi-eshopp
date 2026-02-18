@@ -13,8 +13,8 @@ annotation PBI_ProTooling = ["DevMode"]
 annotation PBI_QueryOrder = ["customers"]
 
 ref table customers
-ref table DateTableTemplate_f9da81f7-8c7b-42aa-8820-0107edfe8fae
-ref table LocalDateTable_a778537a-c5a2-4305-bf04-2f1cb7246a21
+ref table DateTableTemplate_79d9a0a8-be1e-423b-a243-262a86799afa
+ref table LocalDateTable_a3cf9bad-64c0-4f53-b152-a17a840276f1
 
 ref cultureInfo en-US
 

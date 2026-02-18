@@ -10,11 +10,11 @@
       "nodes": [
         {
           "location": {
-            "x": 76,
-            "y": 8
+            "x": 164,
+            "y": 38
           },
           "nodeIndex": "customers",
-          "nodeLineageTag": "17a0a87e-3a53-4a1c-8390-93e3c8d1b408",
+          "nodeLineageTag": "04e395a7-862f-4faa-8b61-167f02bb86a4",
           "size": {
             "height": 224,
             "width": 234
