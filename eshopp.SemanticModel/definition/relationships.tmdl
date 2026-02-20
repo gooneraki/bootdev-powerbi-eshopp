@@ -3,3 +3,12 @@ relationship 2ac88379-40e9-4a36-92de-047e9f4e0310
 	fromColumn: customers.customer_signup_date
 	toColumn: LocalDateTable_a3cf9bad-64c0-4f53-b152-a17a840276f1.Date
 
+relationship 4e712c9f-f272-4710-9dbf-c2c7718b286a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: website_sessions.session_date
+	toColumn: LocalDateTable_79adc6e3-5333-4c10-923e-d6b00d8437aa.Date
+
+relationship AutoDetected_be4b42d0-0815-4bd4-a6b9-9bab8bcab2ea
+	fromColumn: website_sessions.customer_id
+	toColumn: customers.customer_id
+
