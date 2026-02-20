@@ -60,7 +60,8 @@ table website_sessions
 		annotation SummarizationSetBy = Automatic
 
 	column session_purchase_made
-		dataType: string
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: 84ae6aea-1bdc-49d2-b589-221c4e8f7e3d
 		summarizeBy: none
 		sourceColumn: session_purchase_made
