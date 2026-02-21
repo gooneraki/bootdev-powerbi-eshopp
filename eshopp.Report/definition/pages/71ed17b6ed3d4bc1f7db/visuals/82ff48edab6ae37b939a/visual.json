@@ -32,6 +32,24 @@
             }
           ]
         },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "website_sessions"
+                    }
+                  },
+                  "Property": "device_type"
+                }
+              },
+              "queryRef": "website_sessions.device_type",
+              "nativeQueryRef": "device_type"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -145,6 +163,20 @@
               }
             },
             "Property": "session_date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "10c82467668f29aa424c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "website_sessions"
+              }
+            },
+            "Property": "device_type"
           }
         },
         "type": "Categorical"

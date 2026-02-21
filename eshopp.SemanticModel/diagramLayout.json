@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 20,
-            "y": 10
+            "y": 11
           },
           "nodeIndex": "customers",
           "nodeLineageTag": "04e395a7-862f-4faa-8b61-167f02bb86a4",
@@ -24,12 +24,25 @@
         {
           "location": {
             "x": 564,
-            "y": 2
+            "y": 3
           },
           "nodeIndex": "website_sessions",
           "nodeLineageTag": "52a83e69-b234-45c7-8c93-aa7cd32a3bfb",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 828,
+            "y": 27
+          },
+          "nodeIndex": "sales",
+          "nodeLineageTag": "bd96d601-9929-47f2-aaf4-e2c1c9ffcd99",
+          "size": {
+            "height": 248,
             "width": 234
           },
           "zIndex": 0

@@ -51,22 +51,12 @@ table website_sessions
 
 		annotation SummarizationSetBy = Automatic
 
-	column browser_os
-		dataType: string
-		lineageTag: 7ffc443f-afa7-42f1-81b5-29631cc9f1a1
-		summarizeBy: none
-		sourceColumn: browser_os
-
-		annotation SummarizationSetBy = Automatic
-
 	column session_purchase_made
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: 84ae6aea-1bdc-49d2-b589-221c4e8f7e3d
 		summarizeBy: none
 		sourceColumn: session_purchase_made
-
-		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -98,15 +88,36 @@ table website_sessions
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column browser
+		dataType: string
+		lineageTag: 6b25011a-4791-4d3c-ad10-261ed6bf0439
+		summarizeBy: none
+		sourceColumn: browser
+
+		annotation SummarizationSetBy = Automatic
+
+	column os
+		dataType: string
+		lineageTag: 783cd658-3e1d-493d-9329-509e7ce986dc
+		summarizeBy: none
+		sourceColumn: os
+
+		annotation SummarizationSetBy = Automatic
+
 	partition website_sessions = m
 		mode: import
 		source =
 				let
 				    Source = Csv.Document(File.Contents("C:\Users\hayia\projects\boot-dev\dataviz-project\website_sessions.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"session_id", type text}, {"session_date", type date}, {"customer_id", Int64.Type}, {"store_id", Int64.Type}, {"device_type", type text}, {"browser_os", type text}, {"session_purchase_made", type logical}, {"session_duration_minutes", Int64.Type}, {"session_pages_visited", Int64.Type}, {"session_quality_score", type number}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"session_id", type text}, {"session_date", type date}, {"customer_id", Int64.Type}, {"store_id", Int64.Type}, {"device_type", type text}, {"browser_os", type text}, {"session_purchase_made", type logical}, {"session_duration_minutes", Int64.Type}, {"session_pages_visited", Int64.Type}, {"session_quality_score", type number}}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type", "browser_os", Splitter.SplitTextByDelimiter("|", QuoteStyle.Csv), {"browser_os.1", "browser_os.2"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"browser_os.1", type text}, {"browser_os.2", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"browser_os.1", "browser"}, {"browser_os.2", "os"}})
 				in
-				    #"Changed Type"
+				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 
