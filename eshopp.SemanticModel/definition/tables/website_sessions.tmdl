@@ -104,6 +104,14 @@ table website_sessions
 
 		annotation SummarizationSetBy = Automatic
 
+	column os_on_device
+		dataType: string
+		lineageTag: 171b2658-fa7a-4ae0-9112-98632ca13f09
+		summarizeBy: none
+		sourceColumn: os_on_device
+
+		annotation SummarizationSetBy = Automatic
+
 	partition website_sessions = m
 		mode: import
 		source =
@@ -113,9 +121,11 @@ table website_sessions
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"session_id", type text}, {"session_date", type date}, {"customer_id", Int64.Type}, {"store_id", Int64.Type}, {"device_type", type text}, {"browser_os", type text}, {"session_purchase_made", type logical}, {"session_duration_minutes", Int64.Type}, {"session_pages_visited", Int64.Type}, {"session_quality_score", type number}}),
 				    #"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type", "browser_os", Splitter.SplitTextByDelimiter("|", QuoteStyle.Csv), {"browser_os.1", "browser_os.2"}),
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"browser_os.1", type text}, {"browser_os.2", type text}}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"browser_os.1", "browser"}, {"browser_os.2", "os"}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"browser_os.1", "browser"}, {"browser_os.2", "os"}}),
+				    #"Inserted Merged Column" = Table.AddColumn(#"Renamed Columns", "Merged", each Text.Combine({[os], [device_type]}, " on "), type text),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Merged Column",{{"Merged", "os_on_device"}})
 				in
-				    #"Renamed Columns"
+				    #"Renamed Columns1"
 
 	annotation PBI_ResultType = Table
 
