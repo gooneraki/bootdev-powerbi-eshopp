@@ -123,9 +123,10 @@ table website_sessions
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"browser_os.1", type text}, {"browser_os.2", type text}}),
 				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"browser_os.1", "browser"}, {"browser_os.2", "os"}}),
 				    #"Inserted Merged Column" = Table.AddColumn(#"Renamed Columns", "Merged", each Text.Combine({[os], [device_type]}, " on "), type text),
-				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Merged Column",{{"Merged", "os_on_device"}})
+				    #"Renamed Columns1" = Table.RenameColumns(#"Inserted Merged Column",{{"Merged", "os_on_device"}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Renamed Columns1",null,0.5,Replacer.ReplaceValue,{"session_quality_score"})
 				in
-				    #"Renamed Columns1"
+				    #"Replaced Value"
 
 	annotation PBI_ResultType = Table
 
