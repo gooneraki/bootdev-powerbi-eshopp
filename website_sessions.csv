@@ -1,5 +1,5 @@
 session_id,session_date,customer_id,store_id,device_type,browser_os,session_purchase_made,session_duration_minutes,session_pages_visited,session_quality_score
-SESSION_0001,5/1/2024,361,404,mobile,Firefox|Linux,False,45,7,0.09
+SESSION_0001,5/1/2024,361,404,mobile,Edge|MacOS,False,45,7,0.09
 SESSION_0002,3/7/2024,385,402,desktop,Chrome|Windows,True,69,12,0.28
 SESSION_0003,6/1/2024,363,404,desktop,Chrome|Windows,False,34,8,0.09
 SESSION_0004,6/19/2024,344,402,mobile,Safari|iOS,False,37,5,0.28
