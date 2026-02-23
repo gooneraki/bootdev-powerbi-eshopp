@@ -65,6 +65,14 @@ table sales
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column price = sales[sale_quantity] * RELATED(products[product_list_price])
+		lineageTag: ab58eff6-d5f6-458c-8731-64e3f26a46e1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition sales = m
 		mode: import
 		source =
