@@ -1,6 +1,11 @@
 table customers
 	lineageTag: 04e395a7-862f-4faa-8b61-167f02bb86a4
 
+	measure customer_avg_age = AVERAGE(customers[customer_age])
+		lineageTag: 6322e86e-0419-415b-a7b2-79817c15d504
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column customer_id
 		dataType: int64
 		formatString: 0

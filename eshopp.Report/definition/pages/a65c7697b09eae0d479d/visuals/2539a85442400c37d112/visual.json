@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2539a85442400c37d112",
+  "position": {
+    "x": 650,
+    "y": 0,
+    "z": 1,
+    "height": 720,
+    "width": 630,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sales"
+                    }
+                  },
+                  "Property": "total_units_sold"
+                }
+              },
+              "queryRef": "sales.total_units_sold",
+              "nativeQueryRef": "total_units_sold"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "customers"
+                    }
+                  },
+                  "Property": "customer_avg_age"
+                }
+              },
+              "queryRef": "customers.customer_avg_age",
+              "nativeQueryRef": "customer_avg_age"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "sales"
+                  }
+                },
+                "Property": "total_units_sold"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6609605c1560ec443ce9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sales"
+              }
+            },
+            "Property": "total_units_sold"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f3bb9e50561ee0891708",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "customers"
+              }
+            },
+            "Property": "customer_avg_age"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
