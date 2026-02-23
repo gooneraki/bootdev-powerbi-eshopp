@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["customers","website_sessions","sales"]
+annotation PBI_QueryOrder = ["customers","website_sessions","sales","dates","products","stores"]
 
 ref table customers
 ref table DateTableTemplate_79d9a0a8-be1e-423b-a243-262a86799afa
@@ -18,6 +18,11 @@ ref table LocalDateTable_a3cf9bad-64c0-4f53-b152-a17a840276f1
 ref table website_sessions
 ref table LocalDateTable_79adc6e3-5333-4c10-923e-d6b00d8437aa
 ref table sales
+ref table dates
+ref table LocalDateTable_b573d87a-26a7-4747-8aa1-0f96e9da66d2
+ref table products
+ref table stores
+ref table LocalDateTable_d4d6e9cb-9b91-48fb-abcb-3ddcd2bc4adb
 
 ref cultureInfo en-US
 

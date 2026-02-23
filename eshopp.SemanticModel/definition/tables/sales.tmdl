@@ -14,7 +14,7 @@ table sales
 		dataType: int64
 		formatString: 0
 		lineageTag: e53c872b-bbca-4981-87e3-c5cfcafeddca
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: date_id
 
 		annotation SummarizationSetBy = Automatic
@@ -32,7 +32,7 @@ table sales
 		dataType: int64
 		formatString: 0
 		lineageTag: 86631219-7096-4145-86df-9fcb7ad1136a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: product_id
 
 		annotation SummarizationSetBy = Automatic
@@ -41,7 +41,7 @@ table sales
 		dataType: int64
 		formatString: 0
 		lineageTag: 0736dbe2-3dca-4a26-9c2e-5cd81204e80d
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: store_id
 
 		annotation SummarizationSetBy = Automatic

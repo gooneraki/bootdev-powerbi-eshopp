@@ -1,0 +1,75 @@
+table dates
+	lineageTag: 8b96c2df-d0ea-456b-8222-7f877c9610a5
+
+	column date_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c667dc7-a647-4579-ac00-b2745a6e60ff
+		summarizeBy: none
+		sourceColumn: date_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 68d8050e-c3c0-4483-b789-b46a034dc3f6
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: eb5c5e84-bac8-471c-a31c-113f6151c76d
+			defaultHierarchy: LocalDateTable_b573d87a-26a7-4747-8aa1-0f96e9da66d2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column date_month
+		dataType: int64
+		formatString: 0
+		lineageTag: f26cce6c-2c85-48cf-be07-6a05e295bd19
+		summarizeBy: sum
+		sourceColumn: date_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_day
+		dataType: int64
+		formatString: 0
+		lineageTag: 42d45d6c-2c4d-4436-9003-a13cc2f0f4ff
+		summarizeBy: sum
+		sourceColumn: date_day
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_weekday
+		dataType: string
+		lineageTag: 5f0aaff6-7178-4125-9c63-2188f3cf9258
+		summarizeBy: none
+		sourceColumn: date_weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_week
+		dataType: int64
+		formatString: 0
+		lineageTag: a4c8e7da-8516-47d7-82d2-c6cbde9decee
+		summarizeBy: sum
+		sourceColumn: date_week
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dates = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\hayia\projects\boot-dev\dataviz-project\dates.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"date_id", Int64.Type}, {"date", type date}, {"date_month", Int64.Type}, {"date_day", Int64.Type}, {"date_weekday", type text}, {"date_week", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

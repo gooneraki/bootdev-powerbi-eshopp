@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 20,
-            "y": 11
+            "x": 334.16257757424387,
+            "y": 486.52333263770811
           },
           "nodeIndex": "customers",
           "nodeLineageTag": "04e395a7-862f-4faa-8b61-167f02bb86a4",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 564,
-            "y": 3
+            "x": 50.000000000000014,
+            "y": 247.54291522017328
           },
           "nodeIndex": "website_sessions",
           "nodeLineageTag": "52a83e69-b234-45c7-8c93-aa7cd32a3bfb",
@@ -36,8 +36,8 @@
         },
         {
           "location": {
-            "x": 828,
-            "y": 27
+            "x": 618.38225982932977,
+            "y": 230.49044135461736
           },
           "nodeIndex": "sales",
           "nodeLineageTag": "bd96d601-9929-47f2-aaf4-e2c1c9ffcd99",
@@ -46,10 +46,49 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 902.563111266697,
+            "y": 464.08485600230961
+          },
+          "nodeIndex": "dates",
+          "nodeLineageTag": "8b96c2df-d0ea-456b-8222-7f877c9610a5",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 902.56084659073963,
+            "y": -50
+          },
+          "nodeIndex": "products",
+          "nodeLineageTag": "41cb068c-16d7-4b20-91a4-9ed56f52edf7",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.16017340542862,
+            "y": 107.59560221279696
+          },
+          "nodeIndex": "stores",
+          "nodeLineageTag": "f5a04fd4-36a3-43b8-9c90-5a861943dcbc",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 68.09809540012948,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

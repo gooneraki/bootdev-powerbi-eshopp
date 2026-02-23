@@ -38,7 +38,7 @@ table website_sessions
 		dataType: int64
 		formatString: 0
 		lineageTag: 9c8b7ef0-918a-49bb-9381-2c0fdb6fde52
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: store_id
 
 		annotation SummarizationSetBy = Automatic
