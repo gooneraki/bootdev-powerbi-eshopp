@@ -57,9 +57,12 @@ table sales
 
 	column sale_discount
 		dataType: double
+		isHidden
 		lineageTag: 0a5093e6-58be-4f83-b433-a055b45f7ea0
 		summarizeBy: sum
 		sourceColumn: sale_discount
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -67,6 +70,14 @@ table sales
 
 	column price = sales[sale_quantity] * RELATED(products[product_list_price])
 		lineageTag: ab58eff6-d5f6-458c-8731-64e3f26a46e1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discounted_price = sales[price]*(1-sales[sale_discount])
+		lineageTag: 93185aec-9b78-4e73-adf9-2ba649062ec7
 		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
