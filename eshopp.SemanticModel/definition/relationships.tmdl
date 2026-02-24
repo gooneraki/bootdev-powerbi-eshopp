@@ -25,10 +25,6 @@ relationship AutoDetected_b8d9b7e4-c0f7-4c25-8178-f903763a02e1
 	fromColumn: sales.date_id
 	toColumn: dates.date_id
 
-relationship AutoDetected_48716e16-6ca2-4a71-aef9-c73ff3cc8761
-	fromColumn: sales.product_id
-	toColumn: products.product_id
-
 relationship 714d90b2-8e68-4d45-ac75-075be9cbde38
 	joinOnDateBehavior: datePartOnly
 	fromColumn: stores.store_open_date
@@ -41,4 +37,8 @@ relationship AutoDetected_dfc3d16e-8a78-4eca-974f-ef459ab6fb4c
 relationship AutoDetected_3dac5000-0362-462d-99e6-040012d0d704
 	fromColumn: sales.store_id
 	toColumn: stores.store_id
+
+relationship afdcba0d-a282-1017-8a7c-3ae07682df4c
+	fromColumn: sales.product_id
+	toColumn: products.product_id
 

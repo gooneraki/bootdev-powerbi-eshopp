@@ -79,7 +79,7 @@ table sales
 
 	column price = sales[sale_quantity] * RELATED(products[product_list_price])
 		lineageTag: ab58eff6-d5f6-458c-8731-64e3f26a46e1
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
