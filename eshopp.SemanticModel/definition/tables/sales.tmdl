@@ -93,6 +93,13 @@ table sales
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column bulk_order = if(sales[sale_quantity]>3, TRUE(),FALSE())
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c6ad4a4c-986e-42f7-938e-099cc6889240
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition sales = m
 		mode: import
 		source =
