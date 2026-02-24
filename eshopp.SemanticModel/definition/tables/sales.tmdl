@@ -100,6 +100,12 @@ table sales
 
 		annotation SummarizationSetBy = Automatic
 
+	column order_size = SWITCH(TRUE(),sales[discounted_price]<100,"Tiny",sales[discounted_price]<200,"Mid","Massive")
+		lineageTag: 5be10af6-203b-414e-a479-559f6c03ba8f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition sales = m
 		mode: import
 		source =
