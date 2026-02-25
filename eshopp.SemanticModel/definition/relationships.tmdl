@@ -42,3 +42,8 @@ relationship afdcba0d-a282-1017-8a7c-3ae07682df4c
 	fromColumn: sales.product_id
 	toColumn: products.product_id
 
+relationship e73f44fe-93f7-4c49-9f84-a971a807e0bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: sales.sale_date
+	toColumn: LocalDateTable_389dfdc3-e023-4a83-861a-5129d52a2bb0.Date
+

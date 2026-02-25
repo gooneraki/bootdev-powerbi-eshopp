@@ -23,6 +23,7 @@ ref table LocalDateTable_b573d87a-26a7-4747-8aa1-0f96e9da66d2
 ref table products
 ref table stores
 ref table LocalDateTable_d4d6e9cb-9b91-48fb-abcb-3ddcd2bc4adb
+ref table LocalDateTable_389dfdc3-e023-4a83-861a-5129d52a2bb0
 
 ref cultureInfo en-US
 

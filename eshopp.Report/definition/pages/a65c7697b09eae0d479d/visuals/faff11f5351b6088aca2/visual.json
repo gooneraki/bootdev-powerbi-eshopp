@@ -28,6 +28,20 @@
               },
               "queryRef": "sales.total_revenue",
               "nativeQueryRef": "total_revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sales"
+                    }
+                  },
+                  "Property": "revenue_in_feb"
+                }
+              },
+              "queryRef": "sales.revenue_in_feb",
+              "nativeQueryRef": "revenue_in_feb"
             }
           ]
         }
@@ -65,6 +79,20 @@
               }
             },
             "Property": "total_revenue"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fd10917833795b0ee509",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sales"
+              }
+            },
+            "Property": "revenue_in_feb"
           }
         },
         "type": "Advanced"
