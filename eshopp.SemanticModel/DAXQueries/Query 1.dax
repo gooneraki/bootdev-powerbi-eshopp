@@ -2,5 +2,13 @@
 // Right-click on tables, columns, or measures in the data pane to access quick queries, or ask Copilot for help writing DAX.
 
 // Select "Run" to try this sample DAX query.
+// EVALUATE
+//     SELECTCOLUMNS('customers',customers[customer_name], customers[customer_age])
 EVALUATE
-    SELECTCOLUMNS('customers',customers[customer_name], customers[customer_age])
+ADDCOLUMNS(
+  sales,
+  "sale_price", sales[sale_quantity]*sales[price],
+  "days_before_migration", DATEDIFF(sales[sale_date],DATE(2025,02,14),DAY)
+)
+ORDER BY
+[days_before_migration] DESC

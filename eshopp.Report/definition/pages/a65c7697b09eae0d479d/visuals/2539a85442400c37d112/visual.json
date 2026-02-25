@@ -4,10 +4,10 @@
   "position": {
     "x": 650,
     "y": 0,
-    "z": 1,
+    "z": 1000,
     "height": 720,
     "width": 630,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -42,8 +42,25 @@
               },
               "queryRef": "customers.customer_avg_age",
               "nativeQueryRef": "customer_avg_age"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "stores"
+                    }
+                  },
+                  "Property": "oldest_store_open_date"
+                }
+              },
+              "queryRef": "stores.oldest_store_open_date",
+              "nativeQueryRef": "oldest_store_open_date"
             }
           ]
+        },
+        "Rows": {
+          "projections": []
         }
       },
       "sortDefinition": {
@@ -70,7 +87,23 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6609605c1560ec443ce9",
+        "name": "eeb8f90321b85440cd9c",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "customers"
+              }
+            },
+            "Property": "customer_avg_age"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d1db483bd41d03d08414",
+        "ordinal": 1,
         "field": {
           "Measure": {
             "Expression": {
@@ -84,19 +117,20 @@
         "type": "Advanced"
       },
       {
-        "name": "f3bb9e50561ee0891708",
+        "name": "b2d4e2d0d715c3126809",
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "customers"
+                "Entity": "stores"
               }
             },
-            "Property": "customer_avg_age"
+            "Property": "oldest_store_open_date"
           }
         },
         "type": "Advanced"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

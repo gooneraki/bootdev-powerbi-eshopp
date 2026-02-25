@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 369,
-    "z": 1,
+    "z": 1000,
     "height": 351,
     "width": 1261,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -131,56 +131,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "27a774a5b32c482260d8",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "website_sessions"
-                  }
-                },
-                "Property": "session_pages_visited"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e22cea36279e80d83337",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "website_sessions"
-              }
-            },
-            "Property": "session_date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "10c82467668f29aa424c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "website_sessions"
-              }
-            },
-            "Property": "device_type"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
