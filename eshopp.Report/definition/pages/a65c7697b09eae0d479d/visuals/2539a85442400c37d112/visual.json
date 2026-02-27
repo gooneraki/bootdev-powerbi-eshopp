@@ -56,6 +56,20 @@
               },
               "queryRef": "stores.oldest_store_open_date",
               "nativeQueryRef": "oldest_store_open_date"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "website_sessions"
+                    }
+                  },
+                  "Property": "session_quality_score_avg_scaled"
+                }
+              },
+              "queryRef": "website_sessions.session_quality_score_avg_scaled",
+              "nativeQueryRef": "session_quality_score_avg_scaled"
             }
           ]
         },
@@ -126,6 +140,20 @@
               }
             },
             "Property": "oldest_store_open_date"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f917590a08704a02c04e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "website_sessions"
+              }
+            },
+            "Property": "session_quality_score_avg_scaled"
           }
         },
         "type": "Advanced"
