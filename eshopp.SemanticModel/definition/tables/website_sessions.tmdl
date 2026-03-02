@@ -6,6 +6,14 @@ table website_sessions
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure target_quality_score = 50
+		formatString: 0
+		lineageTag: 8da16e95-794d-46ec-8249-d35d9b50d39c
+
+	measure max_quality_score = 100
+		formatString: 0
+		lineageTag: ac5aff3c-51a6-4a6a-ba67-e826507d7e04
+
 	column session_id
 		dataType: string
 		lineageTag: 86e6f017-8554-4800-ac59-9d52440e150f
