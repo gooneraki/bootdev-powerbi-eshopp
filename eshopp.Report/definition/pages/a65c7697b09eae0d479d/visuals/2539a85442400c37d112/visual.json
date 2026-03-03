@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "2539a85442400c37d112",
   "position": {
     "x": 650,
@@ -72,9 +72,6 @@
               "nativeQueryRef": "session_quality_score_avg_scaled"
             }
           ]
-        },
-        "Rows": {
-          "projections": []
         }
       },
       "sortDefinition": {
@@ -126,34 +123,6 @@
               }
             },
             "Property": "total_units_sold"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b2d4e2d0d715c3126809",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "stores"
-              }
-            },
-            "Property": "oldest_store_open_date"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f917590a08704a02c04e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "website_sessions"
-              }
-            },
-            "Property": "session_quality_score_avg_scaled"
           }
         },
         "type": "Advanced"

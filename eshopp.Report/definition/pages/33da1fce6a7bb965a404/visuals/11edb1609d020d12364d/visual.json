@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "6ec11a08e1c4dd5d36ae",
+  "name": "11edb1609d020d12364d",
   "position": {
-    "x": 639.453257173487,
-    "y": 0,
-    "z": 1000,
+    "x": 9.6055210305030236,
+    "y": 370.49866831940238,
+    "z": 1001,
     "height": 349.91540896832447,
-    "width": 629.847736142984,
-    "tabOrder": 1000
+    "width": 1259.695472285968,
+    "tabOrder": 1001
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "stores"
+                      "Entity": "products"
                     }
                   },
-                  "Property": "store_type"
+                  "Property": "product_category"
                 }
               },
-              "queryRef": "stores.store_type",
-              "nativeQueryRef": "store_type",
+              "queryRef": "products.product_category",
+              "nativeQueryRef": "product_category",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "sales"
-                        }
-                      },
-                      "Property": "sale_quantity"
+                    "SourceRef": {
+                      "Entity": "sales"
                     }
                   },
-                  "Function": 0
+                  "Property": "total_revenue"
                 }
               },
-              "queryRef": "Sum(sales.sale_quantity)",
-              "nativeQueryRef": "Sum of sale_quantity"
+              "queryRef": "sales.total_revenue",
+              "nativeQueryRef": "total_revenue"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "sales"
-                      }
-                    },
-                    "Property": "sale_quantity"
+                  "SourceRef": {
+                    "Entity": "sales"
                   }
                 },
-                "Function": 0
+                "Property": "total_revenue"
               }
             },
             "direction": "Descending"
@@ -80,6 +70,21 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'inside'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -87,7 +92,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales by Store Type'"
+                  "Value": "'Revenue by Category'"
                 }
               }
             }
@@ -100,34 +105,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "78ed6de50065054422c4",
+        "name": "7e748f2d0819793013da",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "stores"
+                "Entity": "products"
               }
             },
-            "Property": "store_type"
+            "Property": "product_category"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "5159414ea016c52e29db",
+        "name": "5a34c2563c0c9b0b840d",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "sales"
-                  }
-                },
-                "Property": "sale_quantity"
+              "SourceRef": {
+                "Entity": "sales"
               }
             },
-            "Function": 0
+            "Property": "total_revenue"
           }
         },
         "type": "Advanced"

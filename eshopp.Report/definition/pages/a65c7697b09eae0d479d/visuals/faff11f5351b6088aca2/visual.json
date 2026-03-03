@@ -66,37 +66,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "44af6f1586ba9560c248",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "sales"
-              }
-            },
-            "Property": "total_revenue"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a085ebb4908744cdc5e9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "sales"
-              }
-            },
-            "Property": "revenue_in_feb"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
