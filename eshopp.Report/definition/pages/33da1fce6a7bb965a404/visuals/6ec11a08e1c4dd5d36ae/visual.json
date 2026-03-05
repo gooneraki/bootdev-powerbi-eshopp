@@ -96,42 +96,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "78ed6de50065054422c4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "stores"
-              }
-            },
-            "Property": "store_type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5159414ea016c52e29db",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "sales"
-                  }
-                },
-                "Property": "sale_quantity"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
