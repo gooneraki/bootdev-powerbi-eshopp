@@ -75,7 +75,6 @@ table sales
 
 	column sale_discount
 		dataType: double
-		isHidden
 		lineageTag: 0a5093e6-58be-4f83-b433-a055b45f7ea0
 		summarizeBy: sum
 		sourceColumn: sale_discount
