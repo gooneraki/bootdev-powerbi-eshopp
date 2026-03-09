@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "6a8a58ff7dda3ecc06b6",
   "position": {
-    "x": 300,
-    "y": 570,
-    "z": 3002,
-    "height": 150,
-    "width": 280,
-    "tabOrder": 3002
+    "x": 0,
+    "y": 441.82587642462056,
+    "z": 5000,
+    "height": 278.96305336299037,
+    "width": 640.16376985611089,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -85,7 +85,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "9174b78ab82834c91ee7",
+        "name": "0d8262758d49847da6c6",
         "field": {
           "Column": {
             "Expression": {
@@ -99,7 +99,7 @@
         "type": "Categorical"
       },
       {
-        "name": "062539580e907dd81c2a",
+        "name": "ab4623d89433ce430bd9",
         "field": {
           "Aggregation": {
             "Expression": {

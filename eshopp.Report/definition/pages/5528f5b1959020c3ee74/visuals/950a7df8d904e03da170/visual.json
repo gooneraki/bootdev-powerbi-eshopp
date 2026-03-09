@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "950a7df8d904e03da170",
   "position": {
-    "x": 300,
-    "y": 0,
+    "x": 0,
+    "y": 161.25031986300021,
     "z": 3000,
-    "height": 280,
-    "width": 280,
+    "height": 280.57555656162037,
+    "width": 640.16376985611089,
     "tabOrder": 3000
   },
   "visual": {
@@ -138,7 +138,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0ac84433520abc5980dd",
+        "name": "1cea2483ca0a9ee263ed",
         "field": {
           "Measure": {
             "Expression": {
@@ -152,7 +152,7 @@
         "type": "Advanced"
       },
       {
-        "name": "aacd03584d043d226012",
+        "name": "44076eb3b2e4d46e63e6",
         "field": {
           "Column": {
             "Expression": {
@@ -166,7 +166,7 @@
         "type": "Categorical"
       },
       {
-        "name": "79bb0178a5e876a22cca",
+        "name": "a242f0527304b5c3a383",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -191,7 +191,7 @@
         "type": "Advanced"
       },
       {
-        "name": "970bfd3f761e17846cd1",
+        "name": "d73688338451bb7e0ab9",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -216,7 +216,7 @@
         "type": "Categorical"
       },
       {
-        "name": "e316ba6a004aa196468d",
+        "name": "20006c1040d864b170ea",
         "field": {
           "HierarchyLevel": {
             "Expression": {

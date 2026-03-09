@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "ea175600ce04b04acd79",
   "position": {
-    "x": 10,
-    "y": 290,
+    "x": 0,
+    "y": 64.500127945200077,
     "z": 1000,
-    "height": 280,
-    "width": 280,
+    "height": 96.750191917800123,
+    "width": 320.88813652737042,
     "tabOrder": 1000
   },
   "visual": {
@@ -52,5 +52,23 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "243b5f49ea8624ccda59",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sales"
+              }
+            },
+            "Property": "discounted_revenue"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

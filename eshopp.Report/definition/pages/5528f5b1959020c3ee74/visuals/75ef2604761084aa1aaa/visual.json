@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "75ef2604761084aa1aaa",
   "position": {
-    "x": 590,
-    "y": 0,
-    "z": 3003,
-    "height": 280,
-    "width": 280,
-    "tabOrder": 3003
+    "x": 640.16376985611089,
+    "y": 161.25031986300021,
+    "z": 6000,
+    "height": 280.57555656162037,
+    "width": 640.16376985611089,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "donutChart",
@@ -130,7 +130,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "587db46eaa81b900d63c",
+        "name": "ed87287c71387100db0a",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -149,7 +149,7 @@
         "type": "Advanced"
       },
       {
-        "name": "f5c989fe890607812e40",
+        "name": "c442e1d0357005b19cc8",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -168,7 +168,7 @@
         "type": "Categorical"
       },
       {
-        "name": "b07c11423528b9023d60",
+        "name": "b3826f76c304db4e009a",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -187,7 +187,7 @@
         "type": "Categorical"
       },
       {
-        "name": "dfddd7197ca2be168c0a",
+        "name": "021cdcf57a47ee460192",
         "field": {
           "HierarchyLevel": {
             "Expression": {

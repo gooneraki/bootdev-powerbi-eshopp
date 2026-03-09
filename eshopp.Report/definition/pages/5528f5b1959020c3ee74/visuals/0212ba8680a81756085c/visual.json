@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "0212ba8680a81756085c",
   "position": {
-    "x": 10,
+    "x": 0,
     "y": 0,
     "z": 0,
-    "height": 280,
-    "width": 280,
+    "height": 64.500127945200077,
+    "width": 640.16376985611089,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "CEO Dashboard"
+                    "value": "CEO Dashboard",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
                   }
                 ]
               }
