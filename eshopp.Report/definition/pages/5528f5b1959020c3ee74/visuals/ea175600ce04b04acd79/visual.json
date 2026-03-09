@@ -6,7 +6,7 @@
     "y": 64.500127945200077,
     "z": 1000,
     "height": 96.750191917800123,
-    "width": 320.88813652737042,
+    "width": 320,
     "tabOrder": 1000
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "sales.discounted_revenue",
               "nativeQueryRef": "Total Revenue",
-              "displayName": "Total Revenue"
+              "displayName": "Total Revenue",
+              "format": "#,0"
             }
           ]
         }
@@ -51,6 +52,39 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "sales.discounted_revenue"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
