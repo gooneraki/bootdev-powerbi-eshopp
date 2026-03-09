@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "sales.total_units_sold",
-              "nativeQueryRef": "total_units_sold"
+              "nativeQueryRef": "Total Units Sold",
+              "displayName": "Total Units Sold"
             }
           ]
         }

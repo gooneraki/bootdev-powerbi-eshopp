@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "products.product_brand",
-              "nativeQueryRef": "product_brand",
-              "active": true
+              "nativeQueryRef": "Product Brand",
+              "active": true,
+              "displayName": "Product Brand"
             }
           ]
         },
@@ -51,7 +52,8 @@
                 }
               },
               "queryRef": "Sum(sales.sale_id)",
-              "nativeQueryRef": "Count of sale_id"
+              "nativeQueryRef": "Quantity of Sales",
+              "displayName": "Quantity of Sales"
             }
           ]
         }
@@ -79,6 +81,35 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales by Brand'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },

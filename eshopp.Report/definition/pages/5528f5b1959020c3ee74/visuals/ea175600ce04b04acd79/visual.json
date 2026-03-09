@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "sales.discounted_revenue",
-              "nativeQueryRef": "discounted_revenue"
+              "nativeQueryRef": "Total Revenue",
+              "displayName": "Total Revenue"
             }
           ]
         }

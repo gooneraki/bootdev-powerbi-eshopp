@@ -109,7 +109,8 @@
                 }
               },
               "queryRef": "products.product_category",
-              "nativeQueryRef": "product_category"
+              "nativeQueryRef": "Product Category",
+              "displayName": "Product Category"
             }
           ]
         },
@@ -127,11 +128,41 @@
                 }
               },
               "queryRef": "sales.discounted_revenue",
-              "nativeQueryRef": "discounted_revenue"
+              "nativeQueryRef": "Revenue",
+              "displayName": "Revenue"
             }
           ]
         }
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Revenue Trend by Product Category'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },

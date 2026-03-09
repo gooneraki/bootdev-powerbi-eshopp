@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "stores.store_name",
-              "nativeQueryRef": "store_name",
-              "active": true
+              "nativeQueryRef": "Nearest Store",
+              "active": true,
+              "displayName": "Nearest Store"
             }
           ]
         },
@@ -51,7 +52,8 @@
                 }
               },
               "queryRef": "Sum(website_sessions.session_duration_minutes)",
-              "nativeQueryRef": "Sum of session_duration_minutes"
+              "nativeQueryRef": "Total Session Durations",
+              "displayName": "Total Session Durations"
             }
           ]
         }
@@ -79,6 +81,35 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Session Durations by Store'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
