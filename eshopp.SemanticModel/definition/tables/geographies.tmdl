@@ -1,0 +1,63 @@
+table geographies
+	lineageTag: daeb1703-0c25-4616-bf7b-457a3915d372
+
+	column geography_country
+		dataType: string
+		lineageTag: c8c007d1-8d89-4177-a6c2-6a4d23b17a36
+		summarizeBy: none
+		sourceColumn: geography_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_state
+		dataType: string
+		lineageTag: 82d73576-a1a7-4e3e-b2c8-4fb9e9f7e270
+		summarizeBy: none
+		sourceColumn: geography_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_city
+		dataType: string
+		lineageTag: 411c5985-9b40-4d55-b039-8c0b8dcaa367
+		summarizeBy: none
+		sourceColumn: geography_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column geography_population
+		dataType: int64
+		formatString: 0
+		lineageTag: 432a708d-708c-43bb-ba3d-580371febff8
+		summarizeBy: sum
+		sourceColumn: geography_population
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'geography_country Hierarchy'
+		lineageTag: e4d1a533-5776-4f0d-a8fb-ffec882a4478
+
+		level geography_country
+			lineageTag: 731ee641-6299-41ef-8ebd-472fbae278fa
+			column: geography_country
+
+		level geography_state
+			lineageTag: 8b683395-88ed-4df8-991c-0d1595f74084
+			column: geography_state
+
+		level geography_city
+			lineageTag: 09fa4ed2-291c-4c59-b8d7-aa74fde43684
+			column: geography_city
+
+	partition geographies = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\hayia\projects\boot-dev\dataviz-project\geographies.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"geography_country", type text}, {"geography_state", type text}, {"geography_city", type text}, {"geography_population", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
