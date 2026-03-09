@@ -4,10 +4,10 @@
   "position": {
     "x": 640.15297773364966,
     "y": 0,
-    "z": 1,
+    "z": 1000,
     "height": 359.99190983139357,
     "width": 640.15297773364966,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "waterfallChart",
@@ -86,37 +86,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "05a90a9821c4e85996e8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "sales"
-              }
-            },
-            "Property": "total_revenue"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e049eee2c7e84755870e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "products"
-              }
-            },
-            "Property": "product_category"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

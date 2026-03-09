@@ -109,37 +109,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "953e484311b46a4989b3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "website_sessions"
-              }
-            },
-            "Property": "session_duration_minutes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c51435717ebe8008922b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "website_sessions"
-              }
-            },
-            "Property": "session_pages_visited"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
