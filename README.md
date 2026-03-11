@@ -1,127 +1,114 @@
-# Power BI Data Visualization Project – Eshopp
+# Eshopp Power BI Data Visualization Project
 
 This repository contains my completed project from the Boot.dev course:
 
-🔗 Course: https://www.boot.dev/courses/learn-data-visualization-power-bi
+Course: https://www.boot.dev/courses/learn-data-visualization-power-bi
 
-The project simulates a real-world business intelligence workflow for a fictional e-commerce company called **Eshopp**, focusing on transforming raw CSV data into interactive dashboards using Power BI.
+The project simulates a business intelligence workflow for a fictional e-commerce company, Eshopp. Raw CSV data is transformed into an interactive, multi-page Power BI report designed for executive decision-making.
 
----
+## Project Overview
 
-## 📊 Project Overview
+This project demonstrates end-to-end BI development:
 
-The goal of this project was to:
+- Importing and cleaning raw CSV data
+- Building a star schema data model
+- Creating DAX measures for KPIs and analysis
+- Designing interactive dashboard pages
+- Applying report formatting and storytelling best practices
 
-- Import and clean raw CSV datasets
-- Model data using a star schema
-- Build calculated columns and DAX measures
-- Create interactive dashboards
-- Apply professional formatting and visualization best practices
+The report includes KPI tracking, revenue trends, session analytics, product and store performance, and geographic drilldowns.
 
-The final result is a multi-page Power BI report including:
+## Tools and Technologies
 
-- KPI dashboards
-- Revenue analysis
-- Session analytics
-- Product and store performance
-- Geographic drilldowns
-- Executive-level dashboard with slicers and filters
-
----
-
-## 🛠️ Tools & Technologies
-
-- **Power BI Desktop**
-- **Power Query (ETL transformations)**
-- **DAX (Data Analysis Expressions)**
+- Power BI Desktop
+- Power Query (ETL)
+- DAX (Data Analysis Expressions)
 - Star schema data modeling
 - CSV data sources
 
----
-
-## 📚 Key Concepts Applied
+## Key Concepts Applied
 
 ### Data Preparation
-- Removing duplicates
-- Splitting and merging columns
-- Handling null values
-- Data type corrections
-- Performance considerations
+
+- Removed duplicates
+- Split and merged columns
+- Handled null values
+- Corrected data types
+- Improved transformation performance
 
 ### Data Modeling
-- Star schema design
-- One-to-many relationships
-- Cross-filter direction management
+
+- Designed fact and dimension tables in a star schema
+- Configured one-to-many relationships
+- Managed filter direction behavior
 
 ### DAX
-- Calculated columns vs measures
-- Aggregations (SUM, AVERAGE, COUNT)
-- Iterators (SUMX, AVERAGEX)
-- Logical functions (IF, SWITCH)
-- Time intelligence functions
-- Row context vs filter context
+
+- Differentiated calculated columns vs measures
+- Built aggregate measures (`SUM`, `AVERAGE`)
+- Used iterator functions (`SUMX`, `AVERAGEX`)
+- Applied context-aware logic with `CALCULATE`
+- Practiced row context vs filter context
 
 ### Visualization
-- Bar, Column, Line, Area, Scatter, Ribbon, Waterfall charts
-- Gauges, Cards, Donut charts
-- Conditional formatting
-- Drilldowns & hierarchies
-- Page, report, and visual-level filters
-- Slicers and Top N filtering
 
----
+- Built bar, column, line, area, scatter, ribbon, and waterfall charts
+- Used gauges, cards, and donut visuals
+- Added conditional formatting and drilldowns
+- Configured page/report/visual filters and slicers
 
-## 📈 Dashboard Features
+## Dashboard Highlights
 
-The final CEO Dashboard includes:
+The final executive dashboard includes:
 
-- Total Revenue (after discounts)
-- Total Units Sold
-- Revenue Trend by Product Category
-- Session Duration by Store
-- Sales by Brand
-- Population Drilldown (Country → State → City)
-- Date and Region slicers
-- Page-level and visual-level filters
+- Total revenue (discount-adjusted)
+- Total units sold
+- Revenue trend by product category
+- Session duration by store
+- Sales by brand
+- Population drilldown (Country -> State -> City)
+- Date and region slicers
 
-The dashboard follows BI best practices:
-- Clear visual hierarchy
-- Consistent formatting
-- Professional layout
-- Interactive filtering
-- Business-focused storytelling
+## Representative DAX Measures
 
----
+The semantic model includes measures such as:
 
-## 🧠 What I Learned
+```dax
+total_revenue = SUM(sales[discounted_price])
+total_units_sold = SUM(sales[sale_quantity])
+discounted_revenue = SUMX(sales, sales[sale_quantity] * sales[discounted_price])
+session_quality_score_avg_scaled = INT(AVERAGEX(website_sessions, 100 * website_sessions[session_quality_score]))
+```
 
-This project strengthened my understanding of:
+## How to Open the Project
 
-- Designing business dashboards for decision-makers
-- Writing DAX measures correctly (and avoiding common pitfalls)
-- Managing filter context
-- Structuring clean, performant Power BI models
-- Communicating insights visually instead of dumping raw data
+1. Install Power BI Desktop.
+2. Clone or download this repository.
+3. Open `eshopp.pbip` in Power BI Desktop.
+4. If prompted, confirm data source paths for the CSV files in the repository root.
+5. Refresh the model and explore the report pages.
 
----
+## Repository Structure
 
-## 📂 File Structure
+- `eshopp.pbip`: Power BI project file
+- `eshopp.Report/`: Report definitions (pages, visuals, themes)
+- `eshopp.SemanticModel/`: Semantic model, tables, relationships, and DAX queries
+- `customers.csv`, `dates.csv`, `geographies.csv`, `products.csv`, `sales.csv`, `stores.csv`, `website_sessions.csv`: Source datasets
 
-- `eshopp.pbip` – Power BI project file (text-based format)
-- `/data` – CSV datasets used in the project
-- Screenshots of dashboards (optional, if added)
+## What I Learned
 
----
+- Translating business questions into actionable dashboard metrics
+- Building reliable DAX measures with correct context behavior
+- Structuring maintainable and performant BI models
+- Presenting insights clearly for non-technical stakeholders
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Publish to Power BI Service
-- Add scheduled refresh simulation
-- Enhance KPI comparisons (MoM / YoY metrics)
-- Add drill-through pages
+- Simulate scheduled refresh workflows
+- Add period-over-period KPI views (MoM, YoY)
+- Add drill-through analysis pages
 
----
-
-## 📄 License
+## License
 
 This project is for educational purposes as part of the Boot.dev curriculum.
